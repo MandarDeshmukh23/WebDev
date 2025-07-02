@@ -1,0 +1,38 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row align-items-center justify-content-center min-vh-100">
+    <div class="col-lg-6 text-white">
+      <h1 class="display-4 fw-bold text-black">Login Form</h1>
+      <p class="lead mt-3 text-black">
+        Fill in the Login Details.
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <div class="card bg-dark text-white shadow-sm rounded-4 p-4">
+        <form method="post">
+          {% csrf_token %}
+          <div class="form-floating mb-3">
+            <input type="text" name="username" class="form-control bg-dark text-white border-secondary" id="username" placeholder="Email address">
+            <label for="username">Username</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" name="password" class="form-control bg-dark text-white border-secondary" id="password" placeholder="Password">
+            <label for="password">Password</label>
+          </div>
+          <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="rememberMe">
+            <label class="form-check-label" for="rememberMe">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 py-2">Login</button>
+          <hr class="my-4 border-secondary">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

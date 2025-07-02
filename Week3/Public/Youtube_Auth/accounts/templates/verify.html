@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="d-flex align-items-center justify-content-center vh-100 bg-dark text-white">
+  <div class="text-center">
+    <div class="mb-4">
+      <!-- Check icon (you can use Bootstrap icons or any SVG here) -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+        <path d="M15.854 7.146a.5.5 0 0 0-.708-.708L7 14.293 1.854 9.146a.5.5 0 1 0-.708.708l5.5 5.5a.5.5 0 0 0 .708 0l8.5-8.5z"/>
+        <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zM8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0z"/>
+      </svg>
+    </div>
+    <h1 class="display-5 fw-bold">Email Verified</h1>
+    <p class="lead text-secondary mt-3">Your email has been successfully verified. You can now log in to your account.</p>
+    <a href="{% url 'login' %}" class="btn btn-primary mt-3">Go to Login</a>
+  </div>
+</div>
+{% endblock %}

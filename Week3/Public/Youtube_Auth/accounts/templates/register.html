@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row align-items-center justify-content-center min-vh-100">
+    <div class="col-lg-6 text-white">
+      <h1 class="display-4 fw-bold text-black">Create your account</h1>
+      <p class="lead mt-3 text-black" >
+        Join us to access exclusive video content. Just fill out the form and get started!
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <div class="card bg-dark text-white shadow-sm rounded-4 p-4">
+        <form method="post">
+          {% csrf_token %}
+          <div class="form-floating mb-3">
+            <input type="text" name="username" class="form-control bg-dark text-white border-secondary" id="username" placeholder="Username" required>
+            <label for="username">Username</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" name="email" class="form-control bg-dark text-white border-secondary" id="email" placeholder="Email" required>
+            <label for="email">Email</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" name="password1" class="form-control bg-dark text-white border-secondary" id="password1" placeholder="Password" required>
+            <label for="password1">Password</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" name="password2" class="form-control bg-dark text-white border-secondary" id="password2" placeholder="Confirm Password" required>
+            <label for="password2">Confirm Password</label>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 py-2">Register</button>
+          <hr class="my-4 border-secondary">
+          <small class="text-muted d-block text-center">
+            By signing up, you agree to the terms of service and privacy policy.
+          </small>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
