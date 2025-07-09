@@ -1,0 +1,18 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-layout {
+  display: flex;
+}
+
+.content-area {
+  margin-left: 200px; /* same width as sidebar */
+  padding: 20px;
+  flex-grow: 1;
+}
+.page-container {
+  padding-top: 80px;
+}
